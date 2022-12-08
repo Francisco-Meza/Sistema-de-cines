@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Sistema_de_cines
 {
     public partial class FrmPeliculas : Form
     {
+        private DataTable datos;
+        //private ClsPeliculas_N
         public FrmPeliculas()
         {
             InitializeComponent();
