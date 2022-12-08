@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Sistema_de_cines
 {
-    public partial class Form1 : Form
+    public partial class FrmAddPelicula : Form
     {
-        public Form1()
+        public FrmAddPelicula()
         {
             InitializeComponent();
         }
+
+        
     }
 }

@@ -16,7 +16,7 @@ namespace Sistema_de_cines
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmPeliculas());
         }
     }
 }
