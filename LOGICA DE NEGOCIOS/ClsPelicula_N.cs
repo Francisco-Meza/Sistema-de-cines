@@ -4,7 +4,7 @@ using System.Data;
 
 namespace LOGICA_DE_NEGOCIOS
 {
-    public class ClsPelicula
+    public class ClsPelicula_N
     {
         private string nombre;
         private string duracion;
