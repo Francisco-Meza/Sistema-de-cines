@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ACCESO A DATOS\ACCESO A DATOS.csproj" />
+    <ProjectReference Include="..\ENTIDAD\ENTIDAD.csproj" />
   </ItemGroup>
 
 </Project>
