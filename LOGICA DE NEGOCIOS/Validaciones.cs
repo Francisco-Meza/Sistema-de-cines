@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ACCESO_A_DATOS;
+
 
 namespace LOGICA_DE_NEGOCIOS
 {
