@@ -87,6 +87,7 @@ namespace DAL
                 cmd.Parameters.Add("@Hora", SqlDbType.VarChar).Value = obj.Hora;
                 cmd.Parameters.Add("@sala", SqlDbType.VarChar).Value = obj.Sala;
                 cmd.Parameters.Add("@idioma", SqlDbType.VarChar).Value = obj.Idioma;
+                cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = obj.Genero;
                 sqlCon.Open();
                 msj = (cmd.ExecuteNonQuery() == 1) ? "OK" : "No se pudo insertar la pelicula";
             }
@@ -118,6 +119,11 @@ namespace DAL
                 cmd.Parameters.Add("@duracion", SqlDbType.VarChar).Value = obj.Duracion;
                 cmd.Parameters.Add("@portada", SqlDbType.VarChar).Value = obj.Portada;
                 cmd.Parameters.Add("@formato", SqlDbType.VarChar).Value = obj.Formato;
+                cmd.Parameters.Add("@clasificación", SqlDbType.VarChar).Value = obj.Clasificacion;
+                cmd.Parameters.Add("@Hora", SqlDbType.VarChar).Value = obj.Hora;
+                cmd.Parameters.Add("@sala", SqlDbType.VarChar).Value = obj.Sala;
+                cmd.Parameters.Add("@idioma", SqlDbType.VarChar).Value = obj.Idioma;
+                cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = obj.Genero;
                 sqlCon.Open();
                 msj = (cmd.ExecuteNonQuery() == 1) ? "OK" : "No se pudo actualizar la pelicula";
             }

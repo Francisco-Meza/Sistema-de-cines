@@ -35,6 +35,8 @@ namespace BUSINESS
             else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
             if (Validaciones.WithForCompareAsciiValue(formato)) obj.Formato = formato;
             else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
+            if (Validaciones.SoloNumero(hora)) obj.Hora = hora;
+            else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
             //ComboBox
             if (Validaciones.WithForCompareAsciiValue(clasificacion)) obj.Clasificacion = clasificacion;
             else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
@@ -59,6 +61,8 @@ namespace BUSINESS
             if (Validaciones.WithForCompareAsciiValue(portada)) obj.Portada = portada;
             else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
             if (Validaciones.WithForCompareAsciiValue(formato)) obj.Formato = formato;
+            else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
+            if (Validaciones.SoloNumero(hora)) obj.Hora = hora;
             else return "Los datos ingresados no tiene un formato correcto, intente no usar caracteres especiales";
             //ComboBox
             if (Validaciones.WithForCompareAsciiValue(clasificacion)) obj.Clasificacion = clasificacion;

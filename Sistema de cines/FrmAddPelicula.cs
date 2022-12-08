@@ -13,11 +13,9 @@ namespace Sistema_de_cines
 {
     public partial class FrmAddPelicula : Form
     {
-        public FrmAddPelicula()
-        {
-            
-        }
-
-        
+        ClsPeliculas_N peliculas;
+        private string nombrePelicula, duracion, portada, formato, clasificacion, idioma, genero, hora;
+        private int sala;
+        private int id;
     }
 }
