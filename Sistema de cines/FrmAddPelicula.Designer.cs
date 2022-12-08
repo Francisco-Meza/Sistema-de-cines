@@ -28,246 +28,327 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSistemasCines = new System.Windows.Forms.Label();
-            this.lblinformacion = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblIdioma = new System.Windows.Forms.Label();
-            this.lblDuracion = new System.Windows.Forms.Label();
-            this.lblGenero = new System.Windows.Forms.Label();
-            this.lblPortada = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblClasificacion = new System.Windows.Forms.Label();
-            this.lblFormato = new System.Windows.Forms.Label();
-            this.lblSala = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
-            this.txtPortada = new System.Windows.Forms.TextBox();
-            this.txtFormato = new System.Windows.Forms.TextBox();
-            this.cmbGenero = new System.Windows.Forms.ComboBox();
-            this.cmbIdioma = new System.Windows.Forms.ComboBox();
-            this.cmbClasificacion = new System.Windows.Forms.ComboBox();
-            this.cmbHora = new System.Windows.Forms.ComboBox();
-            this.cmbSala = new System.Windows.Forms.ComboBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.NombrePelicula = new Guna.UI.WinForms.GunaLabel();
+            this.lblInformacion = new Guna.UI.WinForms.GunaLabel();
+            this.lblNombre = new Guna.UI.WinForms.GunaLabel();
+            this.lblIdioma = new Guna.UI.WinForms.GunaLabel();
+            this.lblDuracion = new Guna.UI.WinForms.GunaLabel();
+            this.lblClasificacion = new Guna.UI.WinForms.GunaLabel();
+            this.lblGenero = new Guna.UI.WinForms.GunaLabel();
+            this.lblFormato = new Guna.UI.WinForms.GunaLabel();
+            this.lblPortada = new Guna.UI.WinForms.GunaLabel();
+            this.lblSala = new Guna.UI.WinForms.GunaLabel();
+            this.lblHora = new Guna.UI.WinForms.GunaLabel();
+            this.TxtNombre = new Guna.UI.WinForms.GunaTextBox();
+            this.TxtDuracion = new Guna.UI.WinForms.GunaTextBox();
+            this.TxtPortada = new Guna.UI.WinForms.GunaTextBox();
+            this.TxtFormato = new Guna.UI.WinForms.GunaTextBox();
+            this.CmbGenero = new Guna.UI.WinForms.GunaComboBox();
+            this.CmbHora = new Guna.UI.WinForms.GunaComboBox();
+            this.CmbIdioma = new Guna.UI.WinForms.GunaComboBox();
+            this.CmbClasificacion = new Guna.UI.WinForms.GunaComboBox();
+            this.CmbSala = new Guna.UI.WinForms.GunaComboBox();
             this.SuspendLayout();
             // 
-            // lblSistemasCines
+            // NombrePelicula
             // 
-            this.lblSistemasCines.AutoSize = true;
-            this.lblSistemasCines.Font = new System.Drawing.Font("Wide Latin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSistemasCines.Location = new System.Drawing.Point(285, 9);
-            this.lblSistemasCines.Name = "lblSistemasCines";
-            this.lblSistemasCines.Size = new System.Drawing.Size(244, 19);
-            this.lblSistemasCines.TabIndex = 5;
-            this.lblSistemasCines.Text = "Sistemas de cines";
+            this.NombrePelicula.AutoSize = true;
+            this.NombrePelicula.Font = new System.Drawing.Font("Elephant", 12F);
+            this.NombrePelicula.Location = new System.Drawing.Point(284, 9);
+            this.NombrePelicula.Name = "NombrePelicula";
+            this.NombrePelicula.Size = new System.Drawing.Size(146, 21);
+            this.NombrePelicula.TabIndex = 2;
+            this.NombrePelicula.Text = "Sistemas de cines";
             // 
-            // lblinformacion
+            // lblInformacion
             // 
-            this.lblinformacion.AutoSize = true;
-            this.lblinformacion.Font = new System.Drawing.Font("Copperplate Gothic Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinformacion.Location = new System.Drawing.Point(353, 46);
-            this.lblinformacion.Name = "lblinformacion";
-            this.lblinformacion.Size = new System.Drawing.Size(115, 17);
-            this.lblinformacion.TabIndex = 6;
-            this.lblinformacion.Text = "Información";
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Font = new System.Drawing.Font("Showcard Gothic", 12F);
+            this.lblInformacion.Location = new System.Drawing.Point(308, 64);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(122, 20);
+            this.lblInformacion.TabIndex = 3;
+            this.lblInformacion.Text = "Información";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(105, 122);
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(68, 111);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 20);
-            this.lblNombre.TabIndex = 7;
+            this.lblNombre.Size = new System.Drawing.Size(73, 21);
+            this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre";
             // 
             // lblIdioma
             // 
             this.lblIdioma.AutoSize = true;
-            this.lblIdioma.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdioma.Location = new System.Drawing.Point(105, 228);
+            this.lblIdioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdioma.Location = new System.Drawing.Point(393, 111);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(60, 20);
-            this.lblIdioma.TabIndex = 8;
+            this.lblIdioma.Size = new System.Drawing.Size(65, 21);
+            this.lblIdioma.TabIndex = 5;
             this.lblIdioma.Text = "Idioma";
             // 
             // lblDuracion
             // 
             this.lblDuracion.AutoSize = true;
-            this.lblDuracion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuracion.Location = new System.Drawing.Point(105, 281);
+            this.lblDuracion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuracion.Location = new System.Drawing.Point(68, 167);
             this.lblDuracion.Name = "lblDuracion";
-            this.lblDuracion.Size = new System.Drawing.Size(76, 20);
-            this.lblDuracion.TabIndex = 9;
+            this.lblDuracion.Size = new System.Drawing.Size(81, 21);
+            this.lblDuracion.TabIndex = 6;
             this.lblDuracion.Text = "Duración";
-            // 
-            // lblGenero
-            // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenero.Location = new System.Drawing.Point(105, 175);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(66, 20);
-            this.lblGenero.TabIndex = 10;
-            this.lblGenero.Text = "Género";
-            // 
-            // lblPortada
-            // 
-            this.lblPortada.AutoSize = true;
-            this.lblPortada.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortada.Location = new System.Drawing.Point(433, 122);
-            this.lblPortada.Name = "lblPortada";
-            this.lblPortada.Size = new System.Drawing.Size(68, 20);
-            this.lblPortada.TabIndex = 11;
-            this.lblPortada.Text = "Portada";
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(433, 281);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(44, 20);
-            this.lblHora.TabIndex = 12;
-            this.lblHora.Text = "Hora";
             // 
             // lblClasificacion
             // 
             this.lblClasificacion.AutoSize = true;
-            this.lblClasificacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClasificacion.Location = new System.Drawing.Point(426, 175);
+            this.lblClasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClasificacion.Location = new System.Drawing.Point(393, 167);
             this.lblClasificacion.Name = "lblClasificacion";
-            this.lblClasificacion.Size = new System.Drawing.Size(103, 20);
-            this.lblClasificacion.TabIndex = 13;
+            this.lblClasificacion.Size = new System.Drawing.Size(108, 21);
+            this.lblClasificacion.TabIndex = 7;
             this.lblClasificacion.Text = "Clasificación";
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenero.Location = new System.Drawing.Point(68, 236);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(69, 21);
+            this.lblGenero.TabIndex = 8;
+            this.lblGenero.Text = "Género";
             // 
             // lblFormato
             // 
             this.lblFormato.AutoSize = true;
-            this.lblFormato.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormato.Location = new System.Drawing.Point(433, 228);
+            this.lblFormato.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormato.Location = new System.Drawing.Point(393, 236);
             this.lblFormato.Name = "lblFormato";
-            this.lblFormato.Size = new System.Drawing.Size(69, 20);
-            this.lblFormato.TabIndex = 14;
+            this.lblFormato.Size = new System.Drawing.Size(76, 21);
+            this.lblFormato.TabIndex = 9;
             this.lblFormato.Text = "Formato";
+            // 
+            // lblPortada
+            // 
+            this.lblPortada.AutoSize = true;
+            this.lblPortada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortada.Location = new System.Drawing.Point(75, 303);
+            this.lblPortada.Name = "lblPortada";
+            this.lblPortada.Size = new System.Drawing.Size(74, 21);
+            this.lblPortada.TabIndex = 10;
+            this.lblPortada.Text = "Portada";
             // 
             // lblSala
             // 
             this.lblSala.AutoSize = true;
-            this.lblSala.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSala.Location = new System.Drawing.Point(438, 339);
+            this.lblSala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSala.Location = new System.Drawing.Point(393, 303);
             this.lblSala.Name = "lblSala";
-            this.lblSala.Size = new System.Drawing.Size(39, 20);
-            this.lblSala.TabIndex = 15;
+            this.lblSala.Size = new System.Drawing.Size(43, 21);
+            this.lblSala.TabIndex = 11;
             this.lblSala.Text = "Sala";
             // 
-            // txtNombre
+            // lblHora
             // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Location = new System.Drawing.Point(187, 125);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(179, 20);
-            this.txtNombre.TabIndex = 16;
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(75, 367);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(47, 21);
+            this.lblHora.TabIndex = 12;
+            this.lblHora.Text = "Hora";
             // 
-            // txtDuracion
+            // TxtNombre
             // 
-            this.txtDuracion.Location = new System.Drawing.Point(187, 283);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(179, 20);
-            this.txtDuracion.TabIndex = 17;
+            this.TxtNombre.BackColor = System.Drawing.Color.Transparent;
+            this.TxtNombre.BaseColor = System.Drawing.Color.White;
+            this.TxtNombre.BorderColor = System.Drawing.Color.Black;
+            this.TxtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtNombre.FocusedBaseColor = System.Drawing.Color.White;
+            this.TxtNombre.FocusedBorderColor = System.Drawing.Color.AntiqueWhite;
+            this.TxtNombre.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.TxtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtNombre.Location = new System.Drawing.Point(155, 111);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.PasswordChar = '\0';
+            this.TxtNombre.Radius = 10;
+            this.TxtNombre.Size = new System.Drawing.Size(202, 32);
+            this.TxtNombre.TabIndex = 13;
             // 
-            // txtPortada
+            // TxtDuracion
             // 
-            this.txtPortada.Location = new System.Drawing.Point(540, 124);
-            this.txtPortada.Name = "txtPortada";
-            this.txtPortada.Size = new System.Drawing.Size(175, 20);
-            this.txtPortada.TabIndex = 18;
+            this.TxtDuracion.BackColor = System.Drawing.Color.Transparent;
+            this.TxtDuracion.BaseColor = System.Drawing.Color.White;
+            this.TxtDuracion.BorderColor = System.Drawing.Color.Black;
+            this.TxtDuracion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtDuracion.FocusedBaseColor = System.Drawing.Color.White;
+            this.TxtDuracion.FocusedBorderColor = System.Drawing.Color.AntiqueWhite;
+            this.TxtDuracion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.TxtDuracion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtDuracion.Location = new System.Drawing.Point(155, 167);
+            this.TxtDuracion.Name = "TxtDuracion";
+            this.TxtDuracion.PasswordChar = '\0';
+            this.TxtDuracion.Radius = 10;
+            this.TxtDuracion.Size = new System.Drawing.Size(202, 32);
+            this.TxtDuracion.TabIndex = 14;
             // 
-            // txtFormato
+            // TxtPortada
             // 
-            this.txtFormato.Location = new System.Drawing.Point(540, 230);
-            this.txtFormato.Name = "txtFormato";
-            this.txtFormato.Size = new System.Drawing.Size(175, 20);
-            this.txtFormato.TabIndex = 19;
+            this.TxtPortada.BackColor = System.Drawing.Color.Transparent;
+            this.TxtPortada.BaseColor = System.Drawing.Color.White;
+            this.TxtPortada.BorderColor = System.Drawing.Color.Black;
+            this.TxtPortada.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtPortada.FocusedBaseColor = System.Drawing.Color.White;
+            this.TxtPortada.FocusedBorderColor = System.Drawing.Color.AntiqueWhite;
+            this.TxtPortada.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.TxtPortada.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtPortada.Location = new System.Drawing.Point(155, 303);
+            this.TxtPortada.Name = "TxtPortada";
+            this.TxtPortada.PasswordChar = '\0';
+            this.TxtPortada.Radius = 10;
+            this.TxtPortada.Size = new System.Drawing.Size(202, 32);
+            this.TxtPortada.TabIndex = 15;
             // 
-            // cmbGenero
+            // TxtFormato
             // 
-            this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(187, 177);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(179, 21);
-            this.cmbGenero.TabIndex = 20;
+            this.TxtFormato.BackColor = System.Drawing.Color.Transparent;
+            this.TxtFormato.BaseColor = System.Drawing.Color.White;
+            this.TxtFormato.BorderColor = System.Drawing.Color.Black;
+            this.TxtFormato.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtFormato.FocusedBaseColor = System.Drawing.Color.White;
+            this.TxtFormato.FocusedBorderColor = System.Drawing.Color.AntiqueWhite;
+            this.TxtFormato.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.TxtFormato.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtFormato.Location = new System.Drawing.Point(507, 230);
+            this.TxtFormato.Name = "TxtFormato";
+            this.TxtFormato.PasswordChar = '\0';
+            this.TxtFormato.Radius = 10;
+            this.TxtFormato.Size = new System.Drawing.Size(202, 32);
+            this.TxtFormato.TabIndex = 16;
             // 
-            // cmbIdioma
+            // CmbGenero
             // 
-            this.cmbIdioma.FormattingEnabled = true;
-            this.cmbIdioma.Location = new System.Drawing.Point(187, 230);
-            this.cmbIdioma.Name = "cmbIdioma";
-            this.cmbIdioma.Size = new System.Drawing.Size(179, 21);
-            this.cmbIdioma.TabIndex = 21;
+            this.CmbGenero.BackColor = System.Drawing.Color.Transparent;
+            this.CmbGenero.BaseColor = System.Drawing.Color.White;
+            this.CmbGenero.BorderColor = System.Drawing.Color.Black;
+            this.CmbGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbGenero.DropDownWidth = 304;
+            this.CmbGenero.FocusedColor = System.Drawing.Color.Empty;
+            this.CmbGenero.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbGenero.ForeColor = System.Drawing.Color.Black;
+            this.CmbGenero.FormattingEnabled = true;
+            this.CmbGenero.Location = new System.Drawing.Point(155, 236);
+            this.CmbGenero.Name = "CmbGenero";
+            this.CmbGenero.OnHoverItemBaseColor = System.Drawing.Color.BurlyWood;
+            this.CmbGenero.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.CmbGenero.Radius = 10;
+            this.CmbGenero.Size = new System.Drawing.Size(202, 26);
+            this.CmbGenero.TabIndex = 17;
             // 
-            // cmbClasificacion
+            // CmbHora
             // 
-            this.cmbClasificacion.FormattingEnabled = true;
-            this.cmbClasificacion.Location = new System.Drawing.Point(542, 177);
-            this.cmbClasificacion.Name = "cmbClasificacion";
-            this.cmbClasificacion.Size = new System.Drawing.Size(175, 21);
-            this.cmbClasificacion.TabIndex = 22;
+            this.CmbHora.BackColor = System.Drawing.Color.Transparent;
+            this.CmbHora.BaseColor = System.Drawing.Color.White;
+            this.CmbHora.BorderColor = System.Drawing.Color.Black;
+            this.CmbHora.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbHora.FocusedColor = System.Drawing.Color.Empty;
+            this.CmbHora.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbHora.ForeColor = System.Drawing.Color.Black;
+            this.CmbHora.FormattingEnabled = true;
+            this.CmbHora.Location = new System.Drawing.Point(155, 367);
+            this.CmbHora.Name = "CmbHora";
+            this.CmbHora.OnHoverItemBaseColor = System.Drawing.Color.BurlyWood;
+            this.CmbHora.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.CmbHora.Radius = 10;
+            this.CmbHora.Size = new System.Drawing.Size(202, 26);
+            this.CmbHora.TabIndex = 18;
             // 
-            // cmbHora
+            // CmbIdioma
             // 
-            this.cmbHora.FormattingEnabled = true;
-            this.cmbHora.Location = new System.Drawing.Point(540, 280);
-            this.cmbHora.Name = "cmbHora";
-            this.cmbHora.Size = new System.Drawing.Size(175, 21);
-            this.cmbHora.TabIndex = 23;
+            this.CmbIdioma.BackColor = System.Drawing.Color.Transparent;
+            this.CmbIdioma.BaseColor = System.Drawing.Color.White;
+            this.CmbIdioma.BorderColor = System.Drawing.Color.Black;
+            this.CmbIdioma.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbIdioma.FocusedColor = System.Drawing.Color.Empty;
+            this.CmbIdioma.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbIdioma.ForeColor = System.Drawing.Color.Black;
+            this.CmbIdioma.FormattingEnabled = true;
+            this.CmbIdioma.Location = new System.Drawing.Point(507, 106);
+            this.CmbIdioma.Name = "CmbIdioma";
+            this.CmbIdioma.OnHoverItemBaseColor = System.Drawing.Color.BurlyWood;
+            this.CmbIdioma.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.CmbIdioma.Radius = 10;
+            this.CmbIdioma.Size = new System.Drawing.Size(202, 26);
+            this.CmbIdioma.TabIndex = 19;
             // 
-            // cmbSala
+            // CmbClasificacion
             // 
-            this.cmbSala.FormattingEnabled = true;
-            this.cmbSala.Location = new System.Drawing.Point(540, 338);
-            this.cmbSala.Name = "cmbSala";
-            this.cmbSala.Size = new System.Drawing.Size(175, 21);
-            this.cmbSala.TabIndex = 24;
+            this.CmbClasificacion.BackColor = System.Drawing.Color.Transparent;
+            this.CmbClasificacion.BaseColor = System.Drawing.Color.White;
+            this.CmbClasificacion.BorderColor = System.Drawing.Color.Black;
+            this.CmbClasificacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbClasificacion.FocusedColor = System.Drawing.Color.Empty;
+            this.CmbClasificacion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbClasificacion.ForeColor = System.Drawing.Color.Black;
+            this.CmbClasificacion.FormattingEnabled = true;
+            this.CmbClasificacion.Location = new System.Drawing.Point(507, 167);
+            this.CmbClasificacion.Name = "CmbClasificacion";
+            this.CmbClasificacion.OnHoverItemBaseColor = System.Drawing.Color.BurlyWood;
+            this.CmbClasificacion.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.CmbClasificacion.Radius = 10;
+            this.CmbClasificacion.Size = new System.Drawing.Size(202, 26);
+            this.CmbClasificacion.TabIndex = 20;
             // 
-            // btnGuardar
+            // CmbSala
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Black;
-            this.btnGuardar.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(682, 401);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(106, 37);
-            this.btnGuardar.TabIndex = 25;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.CmbSala.BackColor = System.Drawing.Color.Transparent;
+            this.CmbSala.BaseColor = System.Drawing.Color.White;
+            this.CmbSala.BorderColor = System.Drawing.Color.Black;
+            this.CmbSala.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbSala.FocusedColor = System.Drawing.Color.Empty;
+            this.CmbSala.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbSala.ForeColor = System.Drawing.Color.Black;
+            this.CmbSala.FormattingEnabled = true;
+            this.CmbSala.Location = new System.Drawing.Point(507, 303);
+            this.CmbSala.Name = "CmbSala";
+            this.CmbSala.OnHoverItemBaseColor = System.Drawing.Color.BurlyWood;
+            this.CmbSala.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.CmbSala.Radius = 10;
+            this.CmbSala.Size = new System.Drawing.Size(202, 26);
+            this.CmbSala.TabIndex = 21;
             // 
             // FrmAddPelicula
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.cmbSala);
-            this.Controls.Add(this.cmbHora);
-            this.Controls.Add(this.cmbClasificacion);
-            this.Controls.Add(this.cmbIdioma);
-            this.Controls.Add(this.cmbGenero);
-            this.Controls.Add(this.txtFormato);
-            this.Controls.Add(this.txtPortada);
-            this.Controls.Add(this.txtDuracion);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblSala);
-            this.Controls.Add(this.lblFormato);
-            this.Controls.Add(this.lblClasificacion);
+            this.Controls.Add(this.CmbSala);
+            this.Controls.Add(this.CmbClasificacion);
+            this.Controls.Add(this.CmbIdioma);
+            this.Controls.Add(this.CmbHora);
+            this.Controls.Add(this.CmbGenero);
+            this.Controls.Add(this.TxtFormato);
+            this.Controls.Add(this.TxtPortada);
+            this.Controls.Add(this.TxtDuracion);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.lblHora);
+            this.Controls.Add(this.lblSala);
             this.Controls.Add(this.lblPortada);
+            this.Controls.Add(this.lblFormato);
             this.Controls.Add(this.lblGenero);
+            this.Controls.Add(this.lblClasificacion);
             this.Controls.Add(this.lblDuracion);
             this.Controls.Add(this.lblIdioma);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblinformacion);
-            this.Controls.Add(this.lblSistemasCines);
+            this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(this.NombrePelicula);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddPelicula";
             this.Text = "FrmAddPelicula";
@@ -278,26 +359,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblSistemasCines;
-        private System.Windows.Forms.Label lblinformacion;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblIdioma;
-        private System.Windows.Forms.Label lblDuracion;
-        private System.Windows.Forms.Label lblGenero;
-        private System.Windows.Forms.Label lblPortada;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Label lblClasificacion;
-        private System.Windows.Forms.Label lblFormato;
-        private System.Windows.Forms.Label lblSala;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDuracion;
-        private System.Windows.Forms.TextBox txtPortada;
-        private System.Windows.Forms.TextBox txtFormato;
-        private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.ComboBox cmbIdioma;
-        private System.Windows.Forms.ComboBox cmbClasificacion;
-        private System.Windows.Forms.ComboBox cmbHora;
-        private System.Windows.Forms.ComboBox cmbSala;
-        private System.Windows.Forms.Button btnGuardar;
+        private Guna.UI.WinForms.GunaLabel NombrePelicula;
+        private Guna.UI.WinForms.GunaLabel lblInformacion;
+        private Guna.UI.WinForms.GunaLabel lblNombre;
+        private Guna.UI.WinForms.GunaLabel lblIdioma;
+        private Guna.UI.WinForms.GunaLabel lblDuracion;
+        private Guna.UI.WinForms.GunaLabel lblClasificacion;
+        private Guna.UI.WinForms.GunaLabel lblGenero;
+        private Guna.UI.WinForms.GunaLabel lblFormato;
+        private Guna.UI.WinForms.GunaLabel lblPortada;
+        private Guna.UI.WinForms.GunaLabel lblSala;
+        private Guna.UI.WinForms.GunaLabel lblHora;
+        private Guna.UI.WinForms.GunaTextBox TxtNombre;
+        private Guna.UI.WinForms.GunaTextBox TxtDuracion;
+        private Guna.UI.WinForms.GunaTextBox TxtPortada;
+        private Guna.UI.WinForms.GunaTextBox TxtFormato;
+        private Guna.UI.WinForms.GunaComboBox CmbGenero;
+        private Guna.UI.WinForms.GunaComboBox CmbHora;
+        private Guna.UI.WinForms.GunaComboBox CmbIdioma;
+        private Guna.UI.WinForms.GunaComboBox CmbClasificacion;
+        private Guna.UI.WinForms.GunaComboBox CmbSala;
     }
 }
