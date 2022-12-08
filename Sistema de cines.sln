@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de cines", "Sistema de cines\Sistema de cines.csproj", "{AAAE933C-1949-45C8-AEFF-ACECB9C4697D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAAE933C-1949-45C8-AEFF-ACECB9C4697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAE933C-1949-45C8-AEFF-ACECB9C4697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAE933C-1949-45C8-AEFF-ACECB9C4697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAE933C-1949-45C8-AEFF-ACECB9C4697D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BEDD7AD-6ADD-4F3F-9445-1C177D481D62}
+	EndGlobalSection
+EndGlobal
