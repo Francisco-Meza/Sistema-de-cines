@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using ACCESO_A_DATOS;
 
 namespace LOGICA_DE_NEGOCIOS
 {
