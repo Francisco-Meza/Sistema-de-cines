@@ -14,11 +14,12 @@ namespace ENTIDAD
         private string _clasificacion;
         private string _formato;
         private string _idioma;
-        private int _hora;
-        private int _duracion;
+        private string _hora;
+        private string _duracion;
+        private int _sala;
         private int _idPelicula;
 
-        public string NombrePeicula 
+        public string NombrePelicula 
         { get => _nombrePelicula; set => _nombrePelicula = value; }
         public string Genero
         { get => _genero; set => _genero = value; }
@@ -30,11 +31,13 @@ namespace ENTIDAD
         { get => _formato; set => _formato = value; }
         public string Idioma
         { get => _idioma; set => _idioma = value; }
-        public int Hora
+        public string Hora
         { get => _hora; set => _hora = value; }
-        public int Duracion
+        public string Duracion
         { get => _duracion; set => _duracion = value; }
         public int IdPelicula
         { get => _idPelicula; set => _idPelicula = value; }
+        public int Sala
+        { get => _sala; set => _sala = value; }
     }
 }

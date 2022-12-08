@@ -42,8 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsConexion.cs" />
+    <Compile Include="ClsPeliculas_D.cs" />
     <Compile Include="Constantes.cs" />
+    <Compile Include="Entidades\Pelicula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ENTIDAD\ENTIDAD.csproj">
+      <Project>{bc96fc01-d993-49c3-a764-172a6bf3aa09}</Project>
+      <Name>ENTIDAD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

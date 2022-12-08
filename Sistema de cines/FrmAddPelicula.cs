@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUSINESS;
 
 namespace Sistema_de_cines
 {
@@ -14,7 +15,7 @@ namespace Sistema_de_cines
     {
         public FrmAddPelicula()
         {
-            InitializeComponent();
+            
         }
 
         
