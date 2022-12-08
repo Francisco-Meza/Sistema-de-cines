@@ -5,4 +5,8 @@
     <RootNamespace>ACCESO_A_DATOS</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+  </ItemGroup>
+
 </Project>
