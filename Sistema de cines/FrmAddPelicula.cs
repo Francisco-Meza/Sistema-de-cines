@@ -112,7 +112,9 @@ namespace Sistema_de_cines
             cmbSala.ValueMember = "ID";
 
             cmbCine.Items.Add("IXTLAN");
+            cmbCine.Items.Add("COLIMA");
             cmbCine.Items.Add("TEQUILA");
+            cmbCine.Items.Add("GUADALAJARA");
         }
     }
 }
