@@ -35,6 +35,7 @@ namespace Sistema_de_cines
             this.btnModificar = new System.Windows.Forms.Button();
             this.lblSistemas = new System.Windows.Forms.Label();
             this.lblPeliculas = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@ namespace Sistema_de_cines
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -74,6 +76,7 @@ namespace Sistema_de_cines
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -86,6 +89,7 @@ namespace Sistema_de_cines
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // lblSistemas
             // 
@@ -107,18 +111,32 @@ namespace Sistema_de_cines
             this.lblPeliculas.TabIndex = 5;
             this.lblPeliculas.Text = "Películas";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(510, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 36);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Refrescar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmPeliculas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblPeliculas);
             this.Controls.Add(this.lblSistemas);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvPeliculas);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmPeliculas";
             this.Text = "FrmPeliculas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
@@ -135,6 +153,7 @@ namespace Sistema_de_cines
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label lblSistemas;
         private System.Windows.Forms.Label lblPeliculas;
+        private System.Windows.Forms.Button button1;
     }
 }
 

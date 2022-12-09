@@ -19,7 +19,7 @@ namespace DAL
         private ClsConexion()
         {
             this._base = "CINEMAT_IXTLAN";
-            this._servidor = Constantes.francisco2;
+            this._servidor = Constantes.francisco;
             this._usuario = "sa";
             this._clave = "021202";
             this._seguridad = true;

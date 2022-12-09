@@ -20,7 +20,7 @@ namespace DAL
             try
             {
                 sqlCon = ClsConexion.GetInstancia().CreateConnection();
-                SqlCommand cmd = new SqlCommand("SP_LISTAR_PELICULAS", sqlCon);
+                SqlCommand cmd = new SqlCommand("SP_READ_PELICULA_DISTRIBUIDA", sqlCon);
                 cmd.CommandType = CommandType.StoredProcedure;
                 sqlCon.Open();
                 resultado = cmd.ExecuteReader();
@@ -40,7 +40,7 @@ namespace DAL
                 }
             }
         }
-        public DataTable Read(string valor)
+        public DataTable Read(int id, int idCine)
         {
             SqlDataReader resultado;
             DataTable tabla = new DataTable();
@@ -48,9 +48,10 @@ namespace DAL
             try
             {
                 sqlCon = ClsConexion.GetInstancia().CreateConnection();
-                SqlCommand cmd = new SqlCommand("SP_READ_PELICULAS", sqlCon);
+                SqlCommand cmd = new SqlCommand("SP_READ_PELICULA_DISTRIBUIDA_ID", sqlCon);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                cmd.Parameters.Add("@CINE", SqlDbType.Int).Value = idCine;
                 sqlCon.Open();
                 resultado = cmd.ExecuteReader();
                 tabla.Load(resultado);
@@ -76,20 +77,18 @@ namespace DAL
             try
             {
                 sqlCon = ClsConexion.GetInstancia().CreateConnection();
-                SqlCommand cmd = new SqlCommand("SP_CREATE_PERSONAL", sqlCon);
+                SqlCommand cmd = new SqlCommand("SP_CREATE_PELICULA", sqlCon);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = obj.IdPelicula;
-                cmd.Parameters.Add("@nombrePelicula", SqlDbType.VarChar).Value = obj.NombrePelicula;
-                cmd.Parameters.Add("@duracion", SqlDbType.VarChar).Value = obj.Duracion;
-                cmd.Parameters.Add("@portada", SqlDbType.VarChar).Value = obj.Portada;
-                cmd.Parameters.Add("@formato", SqlDbType.VarChar).Value = obj.Formato;
-                cmd.Parameters.Add("@clasificación", SqlDbType.VarChar).Value = obj.Clasificacion;
-                cmd.Parameters.Add("@Hora", SqlDbType.VarChar).Value = obj.Hora;
-                cmd.Parameters.Add("@sala", SqlDbType.VarChar).Value = obj.Sala;
-                cmd.Parameters.Add("@idioma", SqlDbType.VarChar).Value = obj.Idioma;
-                cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = obj.Genero;
+                cmd.Parameters.Add("@CINE", SqlDbType.Int).Value = obj.IdCine;
+                cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = obj.NombrePelicula;
+                cmd.Parameters.Add("@DURACION", SqlDbType.VarChar).Value = obj.Duracion;
+                cmd.Parameters.Add("@CLASIFICACION", SqlDbType.Int).Value = obj.Clasificacion;
+                cmd.Parameters.Add("@GENERO", SqlDbType.Int).Value = obj.Genero;
+                cmd.Parameters.Add("@IDIOMA", SqlDbType.Int).Value = obj.Idioma;
+                cmd.Parameters.Add("@HORA", SqlDbType.VarChar).Value = obj.Hora;
+                cmd.Parameters.Add("@SALA", SqlDbType.Int).Value = obj.Sala;
                 sqlCon.Open();
-                msj = (cmd.ExecuteNonQuery() == 1) ? "OK" : "No se pudo insertar la pelicula";
+                msj = (cmd.ExecuteNonQuery() == 2) ? "OK" : "No se pudo insertar la pelicula";
             }
             catch (Exception e)
             {
@@ -112,20 +111,19 @@ namespace DAL
             try
             {
                 sqlCon = ClsConexion.GetInstancia().CreateConnection();
-                SqlCommand cmd = new SqlCommand("SP_UPDATE_PERLICULA", sqlCon);
+                SqlCommand cmd = new SqlCommand("SP_UPDATE_PELICULA", sqlCon);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = obj.IdPelicula;
-                cmd.Parameters.Add("@nombrePelicula", SqlDbType.VarChar).Value = obj.NombrePelicula;
-                cmd.Parameters.Add("@duracion", SqlDbType.VarChar).Value = obj.Duracion;
-                cmd.Parameters.Add("@portada", SqlDbType.VarChar).Value = obj.Portada;
-                cmd.Parameters.Add("@formato", SqlDbType.VarChar).Value = obj.Formato;
-                cmd.Parameters.Add("@clasificación", SqlDbType.VarChar).Value = obj.Clasificacion;
-                cmd.Parameters.Add("@Hora", SqlDbType.VarChar).Value = obj.Hora;
-                cmd.Parameters.Add("@sala", SqlDbType.VarChar).Value = obj.Sala;
-                cmd.Parameters.Add("@idioma", SqlDbType.VarChar).Value = obj.Idioma;
-                cmd.Parameters.Add("@genero", SqlDbType.VarChar).Value = obj.Genero;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = obj.IdPelicula;
+                cmd.Parameters.Add("@CINE", SqlDbType.Int).Value = obj.IdCine;
+                cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = obj.NombrePelicula;
+                cmd.Parameters.Add("@DURACION", SqlDbType.VarChar).Value = obj.Duracion;
+                cmd.Parameters.Add("@CLASIFICACION", SqlDbType.Int).Value = obj.Clasificacion;
+                cmd.Parameters.Add("@GENERO", SqlDbType.Int).Value = obj.Genero;
+                cmd.Parameters.Add("@IDIOMA", SqlDbType.Int).Value = obj.Idioma;
+                cmd.Parameters.Add("@HORA", SqlDbType.VarChar).Value = obj.Hora;
+                cmd.Parameters.Add("@SALA", SqlDbType.Int).Value = obj.Sala;
                 sqlCon.Open();
-                msj = (cmd.ExecuteNonQuery() == 1) ? "OK" : "No se pudo actualizar la pelicula";
+                msj = (cmd.ExecuteNonQuery() == 2) ? "OK" : "No se pudo actualizar la pelicula";
             }
             catch (Exception e)
             {
@@ -141,7 +139,7 @@ namespace DAL
             return msj;
         }
 
-        public string Delete(int id)
+        public string Delete(int idCine,int id)
         {
             string msj = "";
             SqlConnection sqlCon = new SqlConnection();
@@ -150,9 +148,10 @@ namespace DAL
                 sqlCon = ClsConexion.GetInstancia().CreateConnection();
                 SqlCommand cmd = new SqlCommand("SP_DELETE_PELICULA", sqlCon);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+                cmd.Parameters.Add("@CINE", SqlDbType.Int).Value = idCine;
                 sqlCon.Open();
-                msj = (cmd.ExecuteNonQuery() == 1) ? "OK" : "No se pudo eliminar la pelicula";
+                msj = (cmd.ExecuteNonQuery() == 2) ? "OK" : "No se pudo eliminar la pelicula";
             }
             catch (Exception e)
             {
@@ -167,6 +166,117 @@ namespace DAL
             }
             return msj;
         }
+        public DataTable ReadClasificacion()
+        {
+            SqlDataReader resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon = ClsConexion.GetInstancia().CreateConnection();
+                SqlCommand cmd = new SqlCommand("SP_READ_CLASIFICACION", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                sqlCon.Open();
+                resultado = cmd.ExecuteReader();
+                tabla.Load(resultado);
+                return tabla;
+            }
+            catch (Exception e)
+            {
 
+                throw;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
+        public DataTable ReadIdioma()
+        {
+            SqlDataReader resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon = ClsConexion.GetInstancia().CreateConnection();
+                SqlCommand cmd = new SqlCommand("SP_READ_IDIOMA", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                sqlCon.Open();
+                resultado = cmd.ExecuteReader();
+                tabla.Load(resultado);
+                return tabla;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
+        public DataTable ReadGenero()
+        {
+            SqlDataReader resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon = ClsConexion.GetInstancia().CreateConnection();
+                SqlCommand cmd = new SqlCommand("SP_READ_GENERO", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                sqlCon.Open();
+                resultado = cmd.ExecuteReader();
+                tabla.Load(resultado);
+                return tabla;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
+        public DataTable ReadSala()
+        {
+            SqlDataReader resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection sqlCon = new SqlConnection();
+            try
+            {
+                sqlCon = ClsConexion.GetInstancia().CreateConnection();
+                SqlCommand cmd = new SqlCommand("SP_READ_SALA", sqlCon);
+                cmd.CommandType = CommandType.StoredProcedure;
+                sqlCon.Open();
+                resultado = cmd.ExecuteReader();
+                tabla.Load(resultado);
+                return tabla;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
     }
 }
